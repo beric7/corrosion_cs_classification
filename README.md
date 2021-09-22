@@ -8,10 +8,10 @@ corrosion condition state classification for bridge inspections
 
 The four semantic classes in the dataset are:
 ```
-Background
-Structural Concrete
-Structural Steel 
-Metal Decking
+Background (Good)
+Fair
+Poor
+Severe
 ```
 ***Coming soon in November***
 :red_circle:\[[Paper](/access/not_ready.png)\] :red_circle:\[[Dataset](/access/not_ready.png)\] :red_circle:\[[Trained models](/access/not_ready.png)\]
