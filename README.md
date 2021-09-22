@@ -18,7 +18,7 @@ Severe
 The corrosion condition state segmentation dataset which can be used for the localization of structural damage, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
 
 ## Results
-We were able to achieve an f1-score of __ using the weighted cross entropy classes model. This included using augmented data. 
+We were able to achieve an f1-score of 86.67% using the weighted cross entropy classes model. This included using augmented data. 
 
 <p align="center">
     <img src="/figures/Picture3.jpg"/>
