@@ -2,21 +2,28 @@
 corrosion condition state classification for bridge inspections
 
 <p align="center">
-    <img src="/figures/ex 3.jpeg" />
-    <img src="/figures/ex 1.jpeg" />
+    <img src="/figures/corr_pred.jpg"/>
 </p>
 
 The four semantic classes in the dataset are:
 ```
-Background
-Structural Concrete
-Structural Steel 
-Metal Decking
+Good (Background)
+Fair
+Poor
+Severe
 ```
 ***Coming soon in November***
 :red_circle:\[[Paper](/access/not_ready.png)\] :red_circle:\[[Dataset](/access/not_ready.png)\] :red_circle:\[[Trained models](/access/not_ready.png)\]
 
-The structural material segmentation dataset can be used for auxiliary structural inspection tasks to aid in the localization of structural damage, provide context to predictions, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
+The corrosion condition state segmentation dataset which can be used for the localization of structural damage, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
+
+## Results
+We were able to achieve an f1-score of __ using the weighted cross entropy classes model. This included using augmented data. 
+
+<p align="center">
+    <img src="/figures/corr_results.png"/>
+</p>
+
 
 ## Requirements
 The most important environment configurations are the following:
@@ -65,7 +72,6 @@ Neccesary and optional inputs to the ***main_plus.py*** file:
 ```
 
 Run the following command:
-(there is an example shell script file, 'var_8plus_40epoch_3-2021_ca.sh' we used for training provided in the 'Training' folder).
 ```
 python main_plus.py -data_directory '/PATH TO DATA DIRECTORY/' -exp_directory '/PATH TO SAVE CHECKPOINTS/' \
 --epochs 40 --batch 2
@@ -81,10 +87,10 @@ During training there are model checkpoints saved every epoch. At these checkpoi
 ```
 # color mapping corresponding to classes
 # ---------------------------------------------------------------------
-# 0 = background (Black)
-# 1 = Steel (Red)
-# 2 = Concrete (Green)
-# 3 = Metal Deck (Yellow)
+# 0 = Good (Black)
+# 1 = Fair (Red)
+# 2 = Poor (Green)
+# 3 = Severe (Yellow)
 # ---------------------------------------------------------------------
 self.mapping = {(0,0,0): 0, (0,0,128): 1, (0,128,0): 2, (0,128,128): 3}
 ```
@@ -105,8 +111,8 @@ The ***labels_corrosion_segmentation.txt*** file contains the class labels neede
 
 ## Citation
 ```
-Structural Material Dataset: 
-Structural Material Model:
+Corrosion Condition State Dataset: 
+Corrosion Condition State Model:
 Paper:
 ```
 
