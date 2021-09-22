@@ -2,7 +2,7 @@
 corrosion condition state classification for bridge inspections
 
 <p align="center">
-    <img src="/figures/coor_pred.jpg" />
+    <img src="/figures/corr_pred.jpg"/>
 </p>
 
 The four semantic classes in the dataset are:
@@ -80,10 +80,10 @@ During training there are model checkpoints saved every epoch. At these checkpoi
 ```
 # color mapping corresponding to classes
 # ---------------------------------------------------------------------
-# 0 = background (Black)
-# 1 = Steel (Red)
-# 2 = Concrete (Green)
-# 3 = Metal Deck (Yellow)
+# 0 = Good (Black)
+# 1 = Fair (Red)
+# 2 = Poor (Green)
+# 3 = Severe (Yellow)
 # ---------------------------------------------------------------------
 self.mapping = {(0,0,0): 0, (0,0,128): 1, (0,128,0): 2, (0,128,128): 3}
 ```
