@@ -21,7 +21,7 @@ The corrosion condition state segmentation dataset which can be used for the loc
 We were able to achieve an f1-score of __ using the weighted cross entropy classes model. This included using augmented data. 
 
 <p align="center">
-    <img src="/figures/corr_results.jpg"/>
+    <img src="/figures/corr_results.png"/>
 </p>
 
 
