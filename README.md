@@ -2,7 +2,7 @@
 corrosion condition state classification for bridge inspections
 
 <p align="center">
-    <img src="/figures/corr_pred.jpg"/>
+    <img src="/figures/corr_pred.jpg" | width=800 />
 </p>
 
 The four semantic classes in the dataset are:
@@ -18,10 +18,11 @@ Severe
 The corrosion condition state segmentation dataset which can be used for the localization of structural damage, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
 
 ## Results
-We were able to achieve an f1-score of __ using the weighted cross entropy classes model. This included using augmented data. 
+We were able to achieve an f1-score of 86.67% using the weighted cross entropy classes model. This included using augmented data. 
 
 <p align="center">
-    <img src="/figures/corr_results.png"/>
+    <img src="/figures/Picture3.jpg"  | width=600/>
+    <img src="/figures/corr_results.png"  | width=600/>
 </p>
 
 
@@ -82,7 +83,7 @@ During training there are model checkpoints saved every epoch. At these checkpoi
 ## Training with a custom dataset
 1. Clone the repository
 2. Ensure your image and mask data is 512x512 pixels. *(can use the ***rescale_image.py*** in Pre-processing)*
-3. Ensure that if you resized your masks to 512x512 that they did not interpolate the colors into more color classes than you have. The expected format is RGB. *(can use the ***rescale_segmentation.py*** in Pre-processing)*
+3. Ensure that if you resized your masks to 512x512 that they did not interpolate the colors into more color classes than you have. The expected format is BGR. *(can use the ***rescale_segmentation.py*** in Pre-processing)*
 4. You now need to go into the ***datahandler_plus.py*** file and edit the colors as necessary. For example, the Structural Materials dataset used the following format, which is in the ***datahandler_plus.py*** in this repository.
 ```
 # color mapping corresponding to classes
