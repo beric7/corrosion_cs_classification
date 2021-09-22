@@ -22,6 +22,7 @@ We were able to achieve an f1-score of 86.67% using the weighted cross entropy c
 
 <p align="center">
     <img src="/figures/Picture3.jpg"  | width=600/>
+    <img src="/figures/corr_results.png"  | width=600/>
 </p>
 
 
