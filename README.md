@@ -83,7 +83,7 @@ During training there are model checkpoints saved every epoch. At these checkpoi
 ## Training with a custom dataset
 1. Clone the repository
 2. Ensure your image and mask data is 512x512 pixels. *(can use the ***rescale_image.py*** in Pre-processing)*
-3. Ensure that if you resized your masks to 512x512 that they did not interpolate the colors into more color classes than you have. The expected format is RGB. *(can use the ***rescale_segmentation.py*** in Pre-processing)*
+3. Ensure that if you resized your masks to 512x512 that they did not interpolate the colors into more color classes than you have. The expected format is BGR. *(can use the ***rescale_segmentation.py*** in Pre-processing)*
 4. You now need to go into the ***datahandler_plus.py*** file and edit the colors as necessary. For example, the Structural Materials dataset used the following format, which is in the ***datahandler_plus.py*** in this repository.
 ```
 # color mapping corresponding to classes
