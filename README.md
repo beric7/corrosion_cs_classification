@@ -8,7 +8,7 @@ corrosion condition state classification for bridge inspections
 
 The four semantic classes in the dataset are:
 ```
-Background (Good)
+Good (Background)
 Fair
 Poor
 Severe
