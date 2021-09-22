@@ -129,9 +129,9 @@ def generate_images(model, image_path, gt_mask_path):
     # color mapping corresponding to classes
     # ---------------------------------------------------------------------
     # 0 = background
-    # 1 = concrete
-    # 2 = steel
-    # 3 = metal decking
+    # 1 = fair
+    # 2 = poor
+    # 3 = severe
     # ---------------------------------------------------------------------
 
     y_pred_tensor = mask_pred
@@ -188,61 +188,4 @@ def iterate_data(model, source_image_dir):
     f1 = f1_sum / n
     
     return iOU, f1, confm_sum, y_pred
-
-def spectrum_score_cut(confm_sum):
-    array_1 = [0]
-    array_2 = [0]
-    for i in range(confm_sum.shape[0]):
-        array_1.append(i+1)
-        array_1.insert(0,i+1)
-        array_2.append(i+1)
-        array_2.insert(0,0-(i+1))
-    diagonal = diags(array_1, array_2, shape=(confm_sum.shape[0],confm_sum.shape[0])).toarray()
-    diagonal = np.delete(diagonal, 0, 0) 
-    confm_sum = np.delete(confm_sum, 0, 0)
-    total = sum(sum(confm_sum))
-    norm_confm_sum = confm_sum/total
-    
-    spectrum_matrix = norm_confm_sum * diagonal
-    spectrum_score = float(np.sum(spectrum_matrix))
-    spectrum_score_norm = spectrum_score / i 
-    print('spectrum score: {:0.4f}'.format(spectrum_score_norm))
-    return spectrum_score_norm
-
-def spectrum_score(confm_sum):
-    array_1 = [0]
-    array_2 = [0]
-    for i in range(confm_sum.shape[0]):
-        array_1.append(i+1)
-        array_1.insert(0,i+1)
-        array_2.append(i+1)
-        array_2.insert(0,0-(i+1))
-    diagonal = diags(array_1, array_2, shape=(confm_sum.shape[0],confm_sum.shape[0])).toarray()
-    total = sum(sum(confm_sum))
-    norm_confm_sum = confm_sum/total
-    
-    spectrum_matrix = norm_confm_sum * diagonal
-    spectrum_score = float(np.sum(spectrum_matrix))
-    spectrum_score_norm = spectrum_score / i 
-    print('spectrum score: {:0.4f}'.format(spectrum_score_norm))
-    return spectrum_score_norm
-
-
-
-def spectrum_score_norm(confm_sum):
-    array_1 = [0]
-    array_2 = [0]
-    for i in range(confm_sum.shape[0]):
-        array_1.append(i+1)
-        array_1.insert(0,i+1)
-        array_2.append(i+1)
-        array_2.insert(0,0-(i+1))
-    diagonal = diags(array_1, array_2, shape=(confm_sum.shape[0],confm_sum.shape[0])).toarray()
-    cm = confm_sum.astype('float') / confm_sum.sum(axis=1)[:, np.newaxis]
-    
-    spectrum_matrix = cm * diagonal
-    spectrum_score = float(np.sum(spectrum_matrix))
-    spectrum_score_norm = spectrum_score / i**2 
-    print('spectrum score norm: {:0.4f}'.format(spectrum_score_norm))
-    return spectrum_score_norm
     
