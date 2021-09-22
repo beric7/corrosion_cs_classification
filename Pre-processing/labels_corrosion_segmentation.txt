@@ -1,0 +1,5 @@
+__ignore__
+_background_
+2_Fair_Steel_Corrosion
+3_Poor_Steel_Corrosion
+4_Severe_Steel_Corrosion
