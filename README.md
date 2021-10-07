@@ -13,7 +13,7 @@ Poor
 Severe
 ```
 ***Coming soon in November***
-:red_circle:\[[Paper](/access/not_ready.png)\] :red_circle:\[[Dataset](/access/not_ready.png)\] :red_circle:\[[Trained models](/access/not_ready.png)\]
+:red_circle:\[[Paper](/access/not_ready.png)\] :green_circle:\[[Dataset](https://doi.org/10.7294/16624663.v1)\] :red_circle:\[[Trained models](/access/not_ready.png)\]
 
 The corrosion condition state segmentation dataset which can be used for the localization of structural damage, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
 
@@ -58,7 +58,7 @@ Once training has converged or when it has stopped, we can used the best checkpo
 ## Training with the Structural Material dataset
 
 1. Clone the repository
-2. Download the :red_circle:[dataset](/access/not_ready.png)
+2. Download the :green_circle:[dataset](https://doi.org/10.7294/16624663.v1)
 3. Go into the Training folder
 4. Create a DATA folder
 5. Copy and paste the Train and Test folders for 512x512 images from the dataset you downloaded into the DATA folder
@@ -109,7 +109,7 @@ self.mapping = {(0,0,0): 0, (0,0,128): 1, (0,128,0): 2, (0,128,128): 3}
 ## Building a Custom Dataset
 (The images in the dataset were annotated using [labelme](https://github.com/wkentaro/labelme). We suggest that you use this tool)
 
-0. **If you are planning to extend on the corrosion dataset, then please read the annotation guidelines provided by the author in the :red_circle: [corrosion dataset](/access/not_ready.png) repository.**
+0. **If you are planning to extend on the corrosion dataset, then please read the annotation guidelines provided by the author in the :green_circle: [corrosion dataset](https://doi.org/10.7294/16624663.v1) repository.**
 
 1. Before beginning to annotate, we suggest that you use jpeg for the RGB image files. We advised against beginning with images which are already resized. 
 
@@ -122,10 +122,20 @@ self.mapping = {(0,0,0): 0, (0,0,128): 1, (0,128,0): 2, (0,128,128): 3}
 The ***labels_corrosion_segmentation.txt*** file contains the class labels needed for the ***run_labelme2voc_.py*** function. If your classes are different then they need to be reflected in this particular file.
 
 ## Citation
-```
 Corrosion Condition State Dataset: 
+```
+Bianchi, Eric; Hebdon, Matthew (2021): Corrosion Condition State Semantic Segmentation Dataset. 
+University Libraries, Virginia Tech. Dataset. https://doi.org/10.7294/16624663.v1 
+```
+
 Corrosion Condition State Model:
+```
+
+```
+
 Paper:
+```
+
 ```
 
 
