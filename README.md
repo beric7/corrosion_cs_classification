@@ -2,7 +2,8 @@
 corrosion condition state classification for bridge inspections
 
 <p align="center">
-    <img src="/figures/corr_pred.jpg" | width=800 />
+    <img src="/figures/corrosion_pred_with_descriptions.png" | width=800 />
+    <img src="/figures/class_color_mapping.png" | width=600 />
 </p>
 
 The four semantic classes in the dataset are:
