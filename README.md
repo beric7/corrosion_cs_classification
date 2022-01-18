@@ -13,7 +13,7 @@ Fair
 Poor
 Severe
 ```
-***Coming soon in November***
+***Coming soon in January (?) 2022***
 :red_circle:\[[Paper](/access/not_ready.png)\] :green_circle:\[[Dataset](https://doi.org/10.7294/16624663.v1)\] :green_circle:\[[Trained models](https://doi.org/10.7294/16628620.v1)\]
 
 The corrosion condition state segmentation dataset which can be used for the localization of structural damage, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
@@ -43,6 +43,7 @@ The most important environment configurations are the following:
 - shutil
 
 ## Evaluating the Trained DeeplabV3+ Model
+- Clone the respository.
 - Download the DeeplabV3+ :green_circle:[trained model weights](https://doi.org/10.7294/16628620.v1)
 - Configure ***run_metrics_evaluation.py***
 
@@ -50,6 +51,8 @@ You will get the f1 score, the jaccard index, and the confusion matrix. We sugge
   
 ## Visualizing the results from the Trained DeeplabV3+ Model
 Once training has converged or when it has stopped, we can used the best checkpoint based on the validation data results. This checkpoint is loaded and our test data is evaluated. 
+
+- Clone the respository.
 
 ***run_show_results__.py***
 - gets predicted masks
