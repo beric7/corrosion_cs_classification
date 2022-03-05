@@ -14,7 +14,7 @@ Poor
 Severe
 ```
 ***Coming soon in January (?) 2022***
-:red_circle:\[[Paper](/access/not_ready.png)\] :green_circle:\[[Dataset](https://doi.org/10.7294/16624663.v1)\] :green_circle:\[[Trained models](https://doi.org/10.7294/16628620.v1)\]
+:red_circle:\[[Paper](/access/not_ready.png)\] :green_circle:\[[Dataset](https://doi.org/10.7294/16624663.v1)\] :green_circle:\[[Trained models](https://doi.org/10.7294/16628668.v1)\]
 
 The corrosion condition state segmentation dataset which can be used for the localization of structural damage, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
 
@@ -44,7 +44,7 @@ The most important environment configurations are the following:
 
 ## Evaluating the Trained DeeplabV3+ Model
 - Clone the respository.
-- Download the DeeplabV3+ :green_circle:[trained model weights](https://doi.org/10.7294/16628620.v1)
+- Download the DeeplabV3+ :green_circle:[trained model weights](https://doi.org/10.7294/16628668.v1)
 - Configure ***run_metrics_evaluation.py***
 
 You will get the f1 score, the jaccard index, and the confusion matrix. We suggest running this in an IDE. 
