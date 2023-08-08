@@ -14,7 +14,7 @@ Poor
 Severe
 ```
 ***Coming soon in January (?) 2022***
-:red_circle:\[[Paper](/access/not_ready.png)\] :green_circle:\[[Dataset](https://doi.org/10.7294/16624663.v2)\] :green_circle:\[[Trained models](https://doi.org/10.7294/16628668.v1)\]
+:green_circle:\[[Paper](https://doi.org/10.1061/(ASCE)CP.1943-5487.0001045)] :green_circle:\[[Dataset](https://doi.org/10.7294/16624663.v2)\] :green_circle:\[[Trained models](https://doi.org/10.7294/16628668.v1)\]
 
 The corrosion condition state segmentation dataset which can be used for the localization of structural damage, and for more futuristic style transfer [SPADE](https://arxiv.org/abs/1903.07291) and [GAN](https://arxiv.org/abs/1912.04958) / [GAN-Inversion](https://arxiv.org/abs/2101.05278) applications. 
 
@@ -62,7 +62,7 @@ Once training has converged or when it has stopped, we can used the best checkpo
 ## Training with the Structural Material dataset
 
 1. Clone the repository
-2. Download the :green_circle:[dataset](https://doi.org/10.7294/16624663.v1)
+2. Download the :green_circle:[dataset](https://doi.org/10.7294/16624663.v2)
 3. Go into the Training folder
 4. Create a DATA folder
 5. Copy and paste the Train and Test folders for 512x512 images from the dataset you downloaded into the DATA folder
@@ -129,7 +129,7 @@ The ***labels_corrosion_segmentation.txt*** file contains the class labels neede
 Corrosion Condition State Dataset: 
 ```
 Bianchi, Eric; Hebdon, Matthew (2021): Corrosion Condition State Semantic Segmentation Dataset. 
-University Libraries, Virginia Tech. Dataset. https://doi.org/10.7294/16624663.v1 
+University Libraries, Virginia Tech. Dataset. https://doi.org/10.7294/16624663.v2
 ```
 
 Corrosion Condition State Model:
@@ -140,7 +140,15 @@ University Libraries, Virginia Tech. Software. https://doi.org/10.7294/16628620.
 
 Paper:
 ```
-
+@article{doi:10.1061/(ASCE)CP.1943-5487.0001045,
+author = {Eric Bianchi  and Matthew Hebdon },
+title = {Development of Extendable Open-Source Structural Inspection Datasets},
+journal = {Journal of Computing in Civil Engineering},
+volume = {36},
+number = {6},
+pages = {04022039},
+year = {2022},
+doi = {10.1061/(ASCE)CP.1943-5487.0001045},
 ```
 
 
